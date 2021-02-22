@@ -1,0 +1,52 @@
+.intro {
+    background: linear-gradient(to right, $color-red-1, $color-red-0);
+    .intro__content {
+        width: 80%;
+        margin: 0 auto;
+        padding: $pd-1;
+        .intro__item {
+            .icon {
+                @include styleText(50px, $color-white-0,$fw-bold);
+                margin-right: $mg-2;
+            }
+            .icon__content {
+                padding: $pd-1;
+                p:first-child {
+                    @include styleText($fs-2 - 3, $color-white-0,$fw-bold);
+                    margin-bottom: 0;
+                }
+                p:last-child {
+                    @include styleText($fs-1 +2, $color-white-0,$fw-bold);
+                }
+            }
+        }
+    }
+}
+//RESPONSIVE
+
+@include responsive("extra-large") {
+    .intro__content{
+        .intro__item {
+            .icon {
+                display: none;
+            }
+        
+        .icon__content {
+            text-align: center;
+        }
+    }
+    }
+}
+@include responsive("medium") {
+    .intro {
+        display: none;
+    .intro__content{
+        .intro__item {
+        
+        .icon__content {
+            display: none;
+        }
+    }
+    }
+}
+}

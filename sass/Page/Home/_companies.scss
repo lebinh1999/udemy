@@ -1,0 +1,70 @@
+.companies {
+    background-color: $color-gray-5;
+    p:first-child {
+        @include styleText($fs-0 - 2, $color-gray-4, $fw-normal);
+        padding: 16px;
+        text-align: center;
+    }
+    .companies__content {
+        .conpanies__icon {
+            width: 100%;
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 32px;
+            .companies__item {
+                margin: 0 32px 8px;
+            }
+        }
+        .companies__students {
+            display:flex;   
+            .students__item{
+                padding: 28px 30px;
+                border-right: 1px solid rgb(222, 223, 224);
+                display: flex;
+                flex-grow: 1;
+                justify-content: center;
+                .students__content {
+                    max-width: 400px;
+                    text-align: center;
+                    h3{
+                        @include styleText($fs-2 - 1, rgb(80, 87, 99),$fw-bold-1);
+                        line-height: 1.47em;
+                    }
+                    p {
+                        @include styleText($fs-1 + 3,$color-black-0,400);
+                        line-height: 1.5em;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+// RESPONSIVE
+@include responsive("large") {
+    .companies {
+        .companies__content {
+            .conpanies__icon {
+                padding: 0;
+                .companies__item {
+                    margin: 0 16px 8px;
+                }
+            }
+        }
+    }
+}
+
+@include responsive("medium") {
+    .companies {
+        .companies__content {
+            .conpanies__icon {
+                padding: 0;
+                .companies__item {
+                    margin: 0 10px 8px;
+                }
+            }
+        }
+    }
+}

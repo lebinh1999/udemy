@@ -1,0 +1,46 @@
+.topCategories {
+    margin-bottom: $mg-2;
+    .topCategories__content{
+        width: 85%;
+        margin: 0 auto;
+        h2 {
+            @include styleText($fs-2, $color-black-light,$fw-normal);
+            margin-bottom: 10px;
+            line-height: 1.46em;
+        }
+        .topCategories__item {
+            background-color: $color-white-0;
+            border: 1px solid $color-gray-1;
+            border-radius: 2px;
+            padding: 15px;
+            margin-bottom: $mg-1;;
+            transition: all 0.5s;
+            @include styleText($fs-1 + 2, #14171c,$fw-normal);
+            // box-shadow: rgba(20, 23, 28, 0.1) 0px 0px 1px 1px, rgba(20, 23, 28, 0.1) 0px 3px 1px 0px;
+            &:hover {
+                border: 1px  $color-gray-3;
+                cursor: pointer;
+                box-shadow: rgba(20, 23, 28, 0.1) 0px 0px 1px 1px, rgba(20, 23, 28, 0.1) 0px 3px 1px 0px;
+            }
+            i {
+                padding-right: $pd-2 - 4;
+                font-size: $fs-3;
+                color: $color-black-0;
+            }
+            span {
+                height: 32px;
+                line-height: 31px;
+            }
+        }
+    }
+}
+
+// RESPONSIVE 
+@include responsive("medium") {
+    .topCategories {
+        .topCategories__content {
+            width: 95%;
+            margin: 0 auto;
+        }
+    }
+}

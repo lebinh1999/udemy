@@ -1,0 +1,62 @@
+.udeCarousel {
+    background: url(../../../img/cover.jpg) no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    .udeCarousel__content {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        width: 35%;
+        h1 {
+            @include styleText($fs-4, $color-white-0, $fw-bold-1);
+        }
+        p {
+            @include styleText($fs-2 - 2, $color-white-0, $fw-normal);
+        }
+        .input-group {
+            .form-control {
+                padding: $pd-2;
+                // border-radius: 0;
+                border: none;
+                &::placeholder {
+                    @include styleText($fs-2, $color-gray-3, $fw-normal);
+                }
+                &:focus {
+                    box-shadow: none;
+                    border: none;
+                }
+            }
+            .input-group-append {
+                .input-group-text {
+                    background-color: $color-white-0;
+                    color: $color-red-0;
+                    padding: 0 15px;
+                    border: none;
+                }
+                &:hover {
+                    .input-group-text {
+                        background-color: $color-red-0;
+                        color: $color-white-0;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// RESPONSIVE
+@include responsive("medium") {
+    .udeCarousel {
+        .udeCarousel__content {
+            h1 {
+                @include styleText($fs-3, $color-white-0, $fw-bold);
+            }
+            p {
+                @include styleText($fs-1 + 2, $color-white-0, $fw-normal);
+            }
+        }
+    }
+}

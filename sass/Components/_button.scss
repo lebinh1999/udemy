@@ -1,0 +1,16 @@
+.btn__red {
+    @include styleButton($color-red-0, $color-red-0, $pd-1 + 1, $pd-1 + 2);
+    @include styleText($fs-0, $color-white-0, $fw-bold-1);
+    cursor: pointer;
+    &:hover {
+        @include styleHoverBtn($color-red-2,$color-red-2,$color-white-0)
+    }
+}
+.btn__white {
+    @include styleButton($color-white-0, $color-gray-4,$pd-1 + 1, $pd-1 + 2);
+    @include styleText($fs-0, $color-gray-2,$fw-bold-1);
+    cursor: pointer;
+    &:hover {
+        @include styleHoverBtn($color-white-0,$color-black-0, $color-black-0)
+    }
+}
